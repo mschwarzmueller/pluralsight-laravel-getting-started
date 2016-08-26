@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+    @include('partials.errors')
     <div class="row">
         <div class="col-md-12">
             <form action="{{ route('admin.update') }}" method="post">
