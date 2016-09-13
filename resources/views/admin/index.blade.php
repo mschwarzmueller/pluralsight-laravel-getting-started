@@ -14,9 +14,11 @@
         </div>
     </div>
     <hr>
+    @foreach($posts as $post)
     <div class="row">
         <div class="col-md-12">
-            <p><strong>Learning Laravel</strong> <a href="{{ route('admin.edit', ['id' => 1]) }}">Edit</a></p>
+            <p><strong>{{ $post['title'] }}</strong> <a href="{{ route('admin.edit', ['id' => array_search($post, $posts)]) }}">Edit</a></p>
         </div>
     </div>
+    @endforeach
 @endsection
